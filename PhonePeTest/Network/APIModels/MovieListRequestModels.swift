@@ -30,12 +30,14 @@ struct MovieModel: APIParseable {
   let posterPath: String?
   let title: String?
   let voteAverage: Double?
+  let bgPath: String?
   
   enum CodingKeys: String, CodingKey {
     case id
     case posterPath = "poster_path"
     case title
     case voteAverage = "vote_average"
+    case bgPath = "backdrop_path"
   }
   
   init(from decoder: Decoder) throws {
@@ -44,5 +46,6 @@ struct MovieModel: APIParseable {
     self.posterPath = try container.decodeIfPresent(String.self, forKey: .posterPath)
     self.title = try container.decodeIfPresent(String.self, forKey: .title)
     self.voteAverage = try container.decodeIfPresent(Double.self, forKey: .voteAverage)
+    self.bgPath = try container.decodeIfPresent(String.self, forKey: .bgPath)
   }
 }
