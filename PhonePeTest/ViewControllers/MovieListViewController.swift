@@ -58,10 +58,20 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: MovieListTableViewCell.reuseIdentifier, for: indexPath) as! MovieListTableViewCell
     if let data = viewModel.movieData.value, data.indices.contains(indexPath.row) {
       let movieData = data[indexPath.row]
-      let cellData = MovieListCellDataModel(movieData: movieData, playlistData: ["P1", "P2"])
+      let cellData = MovieListCellDataModel(movieData: movieData, playlistData: viewModel.fetchPlaylistData())
       cell.setupView(cellData)
+      cell.index = indexPath.row
+      cell.delegate = self
     }
     return cell
+  }
+}
+
+extension MovieListViewController: MovieListTableViewCellDelegate {
+  func didTapAddToPlaylist(at index: Int) {
+    let vm = PlaylistViewModel(viewModel.movieData.value![index])
+    let vc = PlaylistViewController(vm)
+    present(vc, animated: true)
   }
 }
 

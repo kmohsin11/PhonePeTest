@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol MovieListTableViewCellDelegate: AnyObject {
+  func didTapAddToPlaylist(at index: Int)
+}
+
 class MovieListTableViewCell: UITableViewCell, ReusableView {
   
   @IBOutlet var movieImageView: UIImageView!
@@ -15,12 +19,20 @@ class MovieListTableViewCell: UITableViewCell, ReusableView {
   @IBOutlet var subtitleLabel: UILabel!
   @IBOutlet var playlistLabel: UILabel!
   
+  var index: Int!
+  weak var delegate: MovieListTableViewCellDelegate?
+  
   override func awakeFromNib() {
     super.awakeFromNib()
   }
 
   override func prepareForReuse() {
     super.prepareForReuse()
+    movieImageView.image = nil
+    movieImageView.kf.cancelDownloadTask()
+    titleLabel.text = nil
+    subtitleLabel.text = nil
+    playlistLabel.text = nil
   }
   
   func setupView(_ data: MovieListCellDataModel) {
@@ -34,4 +46,9 @@ class MovieListTableViewCell: UITableViewCell, ReusableView {
     }
     playlistLabel.text = playlistText
   }
+  
+  @IBAction func addButtonTapped(_ sender: Any) {
+    delegate?.didTapAddToPlaylist(at: index)
+  }
+  
 }

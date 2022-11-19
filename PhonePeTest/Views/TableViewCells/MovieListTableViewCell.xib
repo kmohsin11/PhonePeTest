@@ -49,6 +49,9 @@
                             <string key="title">Add To
 Playlist</string>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="addButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="h3b-Ia-0eJ"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

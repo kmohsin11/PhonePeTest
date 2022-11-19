@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4209CEE92928E23C00423B35 /* KingfisherWrapper+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209CEE82928E23C00423B35 /* KingfisherWrapper+SetImage.swift */; };
+		4209CEED2928E80100423B35 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209CEEB2928E80100423B35 /* PlaylistViewController.swift */; };
+		4209CEEE2928E80100423B35 /* PlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4209CEEC2928E80100423B35 /* PlaylistViewController.xib */; };
+		4209CEF02928E8E900423B35 /* PlaylistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209CEEF2928E8E900423B35 /* PlaylistViewModel.swift */; };
+		4209CEF22928E97600423B35 /* PlaylistDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209CEF12928E97600423B35 /* PlaylistDataModel.swift */; };
 		4215110395737F0FEC392EE1 /* Pods_PhonePeTest_PhonePeTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612DFC30311195D494E5880A /* Pods_PhonePeTest_PhonePeTestUITests.framework */; };
 		4229B9422928831300505EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4229B9412928831300505EDA /* AppDelegate.swift */; };
 		4229B9442928831300505EDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4229B9432928831300505EDA /* SceneDelegate.swift */; };
@@ -57,6 +61,10 @@
 		2FEE69976FDB47833FB9B0A4 /* Pods-PhonePeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhonePeTest.debug.xcconfig"; path = "Target Support Files/Pods-PhonePeTest/Pods-PhonePeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		3E749ADD572CE5AF2F395649 /* Pods-PhonePeTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhonePeTestTests.release.xcconfig"; path = "Target Support Files/Pods-PhonePeTestTests/Pods-PhonePeTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		4209CEE82928E23C00423B35 /* KingfisherWrapper+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KingfisherWrapper+SetImage.swift"; sourceTree = "<group>"; };
+		4209CEEB2928E80100423B35 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		4209CEEC2928E80100423B35 /* PlaylistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistViewController.xib; sourceTree = "<group>"; };
+		4209CEEF2928E8E900423B35 /* PlaylistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewModel.swift; sourceTree = "<group>"; };
+		4209CEF12928E97600423B35 /* PlaylistDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDataModel.swift; sourceTree = "<group>"; };
 		4229B93E2928831300505EDA /* PhonePeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhonePeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4229B9412928831300505EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4229B9432928831300505EDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +142,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4209CEEA2928E7E300423B35 /* PlaylistViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4209CEEB2928E80100423B35 /* PlaylistViewController.swift */,
+				4209CEEC2928E80100423B35 /* PlaylistViewController.xib */,
+			);
+			path = PlaylistViewController;
+			sourceTree = "<group>";
+		};
 		4229B9352928831300505EDA = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,7 @@
 		4229B9712928D44900505EDA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4209CEEA2928E7E300423B35 /* PlaylistViewController */,
 				4229B9452928831300505EDA /* MovieListViewController.swift */,
 			);
 			path = ViewControllers;
@@ -205,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				4229B9732928D46700505EDA /* MovieListViewModel.swift */,
+				4209CEEF2928E8E900423B35 /* PlaylistViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -294,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				4229B9972928E06100505EDA /* MovieListCellDataModel.swift */,
+				4209CEF12928E97600423B35 /* PlaylistDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -417,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4209CEEE2928E80100423B35 /* PlaylistViewController.xib in Resources */,
 				4229B9922928DE1D00505EDA /* MovieListTableViewCell.xib in Resources */,
 				4229B98A2928DCE000505EDA /* movie-list.json in Resources */,
 				4229B94E2928831700505EDA /* LaunchScreen.storyboard in Resources */,
@@ -549,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4209CEF02928E8E900423B35 /* PlaylistViewModel.swift in Sources */,
 				4209CEE92928E23C00423B35 /* KingfisherWrapper+SetImage.swift in Sources */,
 				4229B9872928D76F00505EDA /* URLSession+APIOperationSession.swift in Sources */,
 				4229B9802928D6D900505EDA /* APIOperation.swift in Sources */,
@@ -557,11 +579,13 @@
 				4229B9852928D73B00505EDA /* APIOperationSession.swift in Sources */,
 				4229B9952928E01200505EDA /* ReusableView.swift in Sources */,
 				4229B9822928D6F200505EDA /* APIBaseOperation.swift in Sources */,
+				4209CEED2928E80100423B35 /* PlaylistViewController.swift in Sources */,
 				4229B9982928E06100505EDA /* MovieListCellDataModel.swift in Sources */,
 				4229B97D2928D5BB00505EDA /* MovieListRequestModels.swift in Sources */,
 				4229B9442928831300505EDA /* SceneDelegate.swift in Sources */,
 				4229B9912928DE1D00505EDA /* MovieListTableViewCell.swift in Sources */,
 				4229B98C2928DCF200505EDA /* MockOperationSession.swift in Sources */,
+				4209CEF22928E97600423B35 /* PlaylistDataModel.swift in Sources */,
 				4229B9782928D4DE00505EDA /* APIRequest.swift in Sources */,
 				4229B9742928D46700505EDA /* MovieListViewModel.swift in Sources */,
 				4229B97A2928D50400505EDA /* MovieListAPIRequest.swift in Sources */,

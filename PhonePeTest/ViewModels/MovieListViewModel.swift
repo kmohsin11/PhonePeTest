@@ -12,6 +12,7 @@ import RxCocoa
 class MovieListViewModel {
   
   let movieData = BehaviorRelay<[MovieModel]?>(value: [])
+  let playlistData = BehaviorRelay<[MovieModel]?>(value: [])
   
   func fetchMovies() {
     let operation = APIBaseOperation(MovieListAPIRequest(page: 1), MockOperationSession("movie-list"))
@@ -23,5 +24,13 @@ class MovieListViewModel {
         print(err)
       }
     }
+  }
+  
+  func fetchPlaylistData() -> [String] {
+    if let data = UserDefaults.standard.object(forKey: "playlists") as? Data,
+       let arr = try? JSONDecoder().decode([PlaylistDataModel].self, from: data) {
+      return arr.map({$0.name})
+    }
+    return []
   }
 }
